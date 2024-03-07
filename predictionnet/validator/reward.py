@@ -79,7 +79,7 @@ def get_rewards(
         return [], torch.zeros_like(0).to(self.device)  # Fallback strategy: Log and return 0.
 
     # Prepare to extract close price for this timestamp
-    ticker_symbol = '^STOXX'
+    ticker_symbol = '^N100'
     ticker = yf.Ticker(ticker_symbol)
 
     timestamp = query.timestamp
