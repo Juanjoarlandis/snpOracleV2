@@ -49,7 +49,7 @@ class Validator(BaseValidatorNeuron):
         
     
     async def is_market_open(self, time):
-        ny_open_time = time.replace(hour=0, minute=0, second=0, microsecond=0)
+        ny_open_time = time.replace(hour=10, minute=0, second=0, microsecond=0)
         ny_close_time = time.replace(hour=1, minute=0, second=0, microsecond=0)
 
         if time.weekday() < 5 and ny_open_time <= time <= ny_close_time:
