@@ -48,19 +48,7 @@ class Validator(BaseValidatorNeuron):
         # TODO(developer): Anything specific to your use case you can do here
         
     
-    async def is_market_open(self, time):
-        ny_open_time = time.replace(hour=10, minute=0, second=0, microsecond=0)
-        ny_close_time = time.replace(hour=1, minute=0, second=0, microsecond=0)
 
-        if time.weekday() < 5 and ny_open_time <= time <= ny_close_time:
-            ticker_symbol = '^STOXX'
-            ticker = yf.Ticker(ticker_symbol)
-            adjusted = time - timedelta(minutes=10)
-            data = ticker.history(start=adjusted, end=time, interval='5m')
-            if len(data) > 0:
-                return True
-        else:
-            return False
 
     async def forward(self):
         """
