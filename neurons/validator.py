@@ -49,8 +49,8 @@ class Validator(BaseValidatorNeuron):
         
     
     async def is_market_open(self, time):
-        ny_open_time = time.replace(hour=13, minute=1, second=0, microsecond=0)
-        ny_close_time = time.replace(hour=16, minute=0, second=0, microsecond=0)
+        ny_open_time = time.replace(hour=0, minute=0, second=0, microsecond=0)
+        ny_close_time = time.replace(hour=0, minute=0, second=0, microsecond=0)
 
         if time.weekday() < 5 and ny_open_time <= time <= ny_close_time:
             ticker_symbol = '^STOXX'
