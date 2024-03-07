@@ -4,7 +4,7 @@ from pytz import timezone
 
 
 # Define the ticker symbol for the S&P 500
-ticker_symbol = 'BTC-USD'
+ticker_symbol = '^STOXX'
 
 # Create a ticker object
 ticker = yf.Ticker(ticker_symbol)
