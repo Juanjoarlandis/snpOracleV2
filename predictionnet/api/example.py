@@ -18,7 +18,7 @@ async def test_prediction():
     axons = await get_query_api_axons(wallet=wallet, metagraph=metagraph, uids=[89, 96, 97])
 
     # Store some data!
-    ny_timezone = timezone('America/New_York')
+    ny_timezone = timezone('Europe/Berlin')
     current_time_ny = datetime.now(ny_timezone)
     timestamp = current_time_ny.isoformat()
 

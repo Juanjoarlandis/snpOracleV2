@@ -36,7 +36,7 @@ async def forward(self):
     # get_random_uids is an example method, but you can replace it with your own.
     
     # wait for market to be open
-    ny_timezone = timezone('America/New_York')
+    ny_timezone = timezone('Europe/Berlin')
     current_time_ny = datetime.now(ny_timezone)
     bt.logging.info("Current time: ", current_time_ny)
     

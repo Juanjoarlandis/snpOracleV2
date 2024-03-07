@@ -90,7 +90,7 @@ def get_rewards(
                                     seconds=timestamp.second,
                                     microseconds=timestamp.microsecond) + timedelta(minutes=5, seconds=30)
     
-    ny_timezone = timezone('America/New_York')
+    ny_timezone = timezone('Europe/Berlin')
 
     while (datetime.now(ny_timezone) < rounded_up_time):
         bt.logging.info("Waiting for next 5m interval...")
