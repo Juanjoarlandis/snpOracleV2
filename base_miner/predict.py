@@ -79,7 +79,7 @@ if(__name__=='__main__'):
     #mse = create_and_save_base_model_regression(scaler, X, y)
 
     #model = joblib.load('mining_models/base_linear_regression.joblib')
-    model = load_model('mining_models/base_lstm.h5')
+    model = load_model('mining_models/model_v5_1.h5')
     ny_timezone = timezone('Europe/Berlin')
     current_time_ny = datetime.now(ny_timezone)
     timestamp = current_time_ny.isoformat()
